@@ -1,2 +1,31 @@
+@import 'bootstrap/bootstrap-reboot';
+@import 'bootstrap/bootstrap-grid';
+
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700');
+
 body {
+	font-family: 'Source Sans Pro', sans-serif;
+	-webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
+
+header {
+	background: linear-gradient(0deg, rgba(0,180,255, 0.9), rgba(0,180,255,0.9)), url('/images/background.jpg');
+    background-size: cover;
+	min-height: 460px;
+	color: #fff;
+	display: flex;
+	align-items: center;
+	.nav {
+		width: 100%;
+		position: absolute;
+		top: 0;
+		.logo {
+			img {
+				max-height: 75px;
+			}
+		}
+	}
+}
+
+.text-center {text-align: center}
