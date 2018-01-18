@@ -10,8 +10,8 @@ var adminRoutes = require('./routes/admin.js');
 require('dotenv').config()
 
 // Database connection
-mongoose.Promise = global.Promise;
-mongoose.connect(process.env.DB, {useMongoClient: true});
+// mongoose.Promise = global.Promise;
+// mongoose.connect(process.env.DB, {useMongoClient: true});
 
 // Initialize app
 var app = express();
@@ -39,10 +39,13 @@ app.use(function(req, res, next) {
 });
 
 // Load in routes and router
-app.use('/', indexRoutes);
-app.use('/api', apiRoutes);
-app.use('/admin', adminRoutes);
+// app.use('/', indexRoutes);
+// app.use('/api', apiRoutes);
+// app.use('/admin', adminRoutes);
 
+app.get('/', function(req, res){
+  res.sendFile(__dirname + '/public/pc-old/index.html');
+});
 
 app.use(function(req, res, next){
   res.status(404);

@@ -1704,6 +1704,7 @@ html {
         align-self: stretch !important; } }
 
 body {
+  background: #f8f8ff;
   font-family: 'Source Sans Pro', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
@@ -1713,7 +1714,8 @@ header {
   background: -o-linear-gradient(bottom, rgba(0, 180, 255, 0.9), rgba(0, 180, 255, 0.9)), url("/images/background.jpg");
   background: linear-gradient(0deg, rgba(0, 180, 255, 0.9), rgba(0, 180, 255, 0.9)), url("/images/background.jpg");
   background-size: cover;
-  min-height: 460px;
+  max-height: 660px;
+  height: 80vh;
   color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1727,6 +1729,8 @@ header {
     top: 0; }
     header .nav .logo img {
       max-height: 75px; }
+  header h1 {
+    text-shadow: 1px 2px 1px rgba(0, 0, 0, 0.2); }
 
 .text-center {
   text-align: center; }
